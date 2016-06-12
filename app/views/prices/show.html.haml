@@ -1,0 +1,19 @@
+%p#notice= notice
+%p
+  %strong Model:
+  = @price.model
+%p
+  %strong Year:
+  = @price.year
+%p
+  %strong Meter:
+  = @price.meter
+%p
+  %strong High:
+  = @price.high
+%p
+  %strong Average:
+  = @price.average
+= link_to 'Edit', edit_price_path(@price)
+|
+= link_to 'Back', prices_path

@@ -45,3 +45,9 @@ group :development do
   gem 'spring'
 end
 
+gem 'headless'
+gem 'selenium-webdriver'
+gem 'erb2haml'
+gem 'haml'
+gem 'haml-rails'
+gem 'i18n_generators'

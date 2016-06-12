@@ -1,0 +1,33 @@
+ja:
+  activerecord:
+    models:
+      bike: "バイク"  #g
+      engine: "排気量"  #g
+      maker: "メーカー"  #g
+      meter: "走行距離"  #g
+      price: "買取価格"  #g
+
+    attributes:
+      bike:
+        engine: :activerecord.models.engine  #g
+        maker: :activerecord.models.maker  #g
+        name: "名"  #g
+
+      engine:
+        key: "キー"  #g
+        name: "名"  #g
+
+      maker:
+        key: "キー"  #g
+        name: "名"  #g
+
+      meter:
+        key: "キー"  #g
+        name: "名"  #g
+
+      price:
+        average: "平均価格"  #g
+        high: "最高買取価格"  #g
+        meter_id: :activerecord.models.meter  #g
+        bike_id: :activerecord.models.bike  #g
+        year: "年式"  #g

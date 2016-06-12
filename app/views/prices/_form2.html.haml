@@ -1,0 +1,27 @@
+= form_for :price, remote: true, method: :get, format: :json do
+  .col-md-6
+    .field
+      = label_tag t("activerecord.models.maker")
+      %br/
+      = select_tag :maker_id, options_for_select(@maker_options), prompt: "選択してください", class: "form-control"
+    .field
+      = label_tag t("activerecord.models.engine")
+      %br/
+      = select_tag :engine_id, options_for_select(@engine_options), prompt: "選択してください", class: "form-control"
+    .field
+      = label_tag t("activerecord.attributes.price.bike_id")
+      %br/
+      = select_tag :bike_id, {}, class: "form-control"
+  .col-md-6
+    .field
+      = label_tag t("activerecord.attributes.price.meter_id")
+      %br/
+      = select_tag :meter_id, options_for_select(@meter_options), class: "form-control"
+    .field
+      = label_tag t("activerecord.attributes.price.year")
+      %br/
+      = select_tag :year, {}, class: "form-control"
+  .col-md-12
+    .actions.center
+      = submit_tag "査定開始",class: "btn btn-lg btn-danger"
+

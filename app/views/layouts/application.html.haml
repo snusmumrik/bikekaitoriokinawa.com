@@ -1,0 +1,43 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=Edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "バイク買取沖縄.comは沖縄県内のバイク買取価格を提供するサイトです。 #{@description}", :name => "description"}/
+    %meta{:content => "バイク買取沖縄,バイク,スクーター,原付,買取価格,#{@keywords}", :name => "keywords"}/
+    %meta{:content => "", :name => "author"}/
+    %link{:href => "", :rel => "shortcut icon"}/
+    = favicon_link_tag
+    %title
+      沖縄のバイク買取価格情報 #{@description}
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %div
+      - if notice
+        .alert.alert-success
+          %p#notice= notice
+      - if alert
+        .alert.alert-error
+          %p#alert= alert
+
+    .jumbotron
+      %header.center
+
+      .main-content
+        = yield
+    %footer
+      %div
+        ©#{Date.today.year}
+        %a{"data-no-turbolink" => "true", :href => "/"} バイク買取沖縄.com bikekaitoriokinawa.com
+      .links
+        %a{"data-no-turbolink" => "true", :href => "http://okinawatakarajima.com", :target => "blank"} 沖縄の個人売買総合サイト 沖縄宝島 okinawatakarajima.com
+        %br
+        %a{"data-no-turbolink" => "true", :href => "http://nusuru.com", :target => "blank"} ヌスルー情報局 nusuru.com
+      .small
+        %i
+          Produced by
+          = link_to "ニシムラモータース", "http://nishimuramotors.com", target: :blank

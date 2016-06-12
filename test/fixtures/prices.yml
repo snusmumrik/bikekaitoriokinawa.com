@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model_id: 
+  year: MyString
+  meter_id: 
+  high: 1
+  average: 1
+
+two:
+  model_id: 
+  year: MyString
+  meter_id: 
+  high: 1
+  average: 1

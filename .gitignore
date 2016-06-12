@@ -16,5 +16,6 @@
 
 config/database.yml
 config/environments/production.rb
+config/secrets.yml
 
 public/assets

@@ -1,0 +1,25 @@
+// Place all the styles related to the prices controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+img {
+    margin: 30px auto;
+    &.wide-top {
+        margin-top: 50px;
+    }
+    &.wide-bottom {
+        margin-bottom: 50px;
+    }
+    &.narrow-top {
+        margin-top: 3px;
+    }
+    &.narrow-bottom {
+        margin-bottom: 3px;
+    }
+}
+
+.average {
+    text-align: center;
+    font-size: 350%;
+    color: red;
+}
