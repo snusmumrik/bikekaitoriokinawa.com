@@ -2,13 +2,11 @@ class BikesController < ApplicationController
   # GET /prices
   # GET /prices.json
   def index
-
-    if params[:bike_id] && params[:year] && params[:meter_id]
-      @bikes = Bike.where(["maker_id = ? AND engine_id = ?", params[:maker_id], params[:engine_id]]).all
-    end
-
-    respond_to do |format|
-      format.json @bikes
+    if params[:maker_id] && params[:engine_id]
+      @bikes = Bike.joins(:maker, :engine).where(["makers.id = ? AND engines.id = ?", params[:maker_id], params[:engine_id]]).select(:id, :name)
+      render json: @bikes
+    else
+      redirect_to root_path
     end
   end
 end

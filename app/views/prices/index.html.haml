@@ -2,10 +2,11 @@
   .col-md-12= image_tag "top.jpg"
   .col-md-6
     = image_tag "1_01.jpg"
-    .average= "???"
+    %div#average
+      %div#price
   .col-md-6
     = image_tag "1_02.jpg"
-    = render "prices/form2"
+    = render "prices/search"
   .col-md-12= image_tag "1_03.jpg", class: "wide-top"
   .col-md-12= image_tag "1_04.jpg", class: "wide-top"
   .col-md-12= image_tag "1_05.jpg"
@@ -36,3 +37,5 @@
   .col-md-12= image_tag "2_13.jpg"
   .col-md-12= image_tag "2_15.jpg"
   .col-md-12= image_tag "2_17.jpg"
+  .col-md-12= image_tag "1_07.jpg", class: "narrow-bottom"
+  .col-md-12= image_tag "1_08.jpg", class: "narrow-top"

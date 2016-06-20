@@ -4,9 +4,9 @@ class PricesController < ApplicationController
   # GET /prices
   # GET /prices.json
   def index
-    @maker_options = Maker.all.inject(Array.new) {|a, m| a << [m.name, m.key]; a}
-    @engine_options = Engine.all.inject(Array.new) {|a, e| a << [e.name, e.key]; a}
-    @meter_options = Meter.all.inject(Array.new) {|a, e| a << [e.name, e.key]; a}
+    @maker_options = Maker.all.inject(Array.new) {|a, m| a << [m.name, m.id]; a}
+    @engine_options = Engine.all.inject(Array.new) {|a, e| a << [e.name, e.id]; a}
+    @meter_options = Meter.all.inject(Array.new) {|a, m| a << [m.name, m.id]; a}
 
     if params[:bike_id] && params[:year] && params[:meter_id]
       @price = Price.where(["bike_id = ? AND year = ? AND meter_id = ?", params[:bike_id], params[:year], params[:meter_id]]).first

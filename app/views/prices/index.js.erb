@@ -1,5 +1,1 @@
-if @price {
-  $("div.average").hide().html("<%= number_to_currency @price.try(:average) %>").fadeIn();
-} else {
-  $("div.average").hide().html("バイクを指定してください").fadeIn();
-}
+$("#price").hide().html("<%= number_to_currency @price.try(:average) %>").fadeIn();

@@ -14,13 +14,13 @@
       = select_tag :bike_id, {}, class: "form-control"
   .col-md-6
     .field
+      = label_tag t("activerecord.attributes.price.year")
+      %br/
+      = select_tag :year, options_for_select([]), prompt: "不明もしくは指定なし", class: "form-control"
+    .field
       = label_tag t("activerecord.attributes.price.meter_id")
       %br/
       = select_tag :meter_id, options_for_select(@meter_options), class: "form-control"
-    .field
-      = label_tag t("activerecord.attributes.price.year")
-      %br/
-      = select_tag :year, {}, class: "form-control"
   .col-md-12
     .actions.center
       = submit_tag "査定開始",class: "btn btn-lg btn-danger"

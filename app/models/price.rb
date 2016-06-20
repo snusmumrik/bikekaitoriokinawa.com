@@ -17,13 +17,12 @@ class Price < ActiveRecord::Base
         # bikes = driver.find_elements(:xpath, "//select[@name='family']/option")
         Bike.where(["maker_id = ? AND engine_id = ?", maker.id, engine.id]).all.each do |bike|
           p "#{maker.name} #{engine.name} #{bike.name}"
-          next if bike.id <= 541
-
           unless bike.name == "車種をお選びください"
             /H([0-9]+)/ =~ Date.today.jisx0301
-            wareki = $1.to_i
+            # wareki = $1.to_i
             model_years = ["不明もしくは指定なし"]
-            for i in 1..wareki
+            # for i in 1..wareki
+            for i in 1..63
               model_years << i.to_s
             end
 
