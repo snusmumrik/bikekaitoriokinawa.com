@@ -10,7 +10,9 @@ class PricesController < ApplicationController
 
     if params[:bike_id] && params[:year] && params[:meter_id]
       @price = Price.where(["bike_id = ? AND year = ? AND meter_id = ?", params[:bike_id], params[:year], params[:meter_id]]).first
+      @price.average = 0 if @price.average.nil?
     end
+
 
     respond_to do |format|
       format.html
