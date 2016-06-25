@@ -2,14 +2,17 @@
   .col-md-6
     .field
       = label_tag t("activerecord.models.maker")
+      %span.red 必須
       %br/
       = select_tag :maker_id, options_for_select(@maker_options), prompt: "選択してください", class: "form-control"
     .field
       = label_tag t("activerecord.models.engine")
+      %span.red 必須
       %br/
       = select_tag :engine_id, options_for_select(@engine_options), prompt: "選択してください", class: "form-control"
     .field
       = label_tag t("activerecord.attributes.price.bike_id")
+      %span.red 必須
       %br/
       = select_tag :bike_id, {}, class: "form-control"
   .col-md-6
